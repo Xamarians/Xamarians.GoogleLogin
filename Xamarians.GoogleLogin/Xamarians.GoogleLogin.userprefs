@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{4B39D6A0-DC62-4A57-BF8B-97A246201E9C}|Default">
+  <MonoDevelop.Ide.ItemProperties.Sample.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.3f7d5c1b270e5c35b26219592fbb4059eadfbc01" />
+  <MonoDevelop.Ide.ItemProperties.Xamarians.GoogleLogin.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Xamarians.GoogleLogin/Platforms/GoogleLoginResult.cs">
+    <Files>
+      <File FileName="Sample/Sample.iOS/Info.plist" />
+      <File FileName="Sample/Sample.iOS/AppDelegate.cs" Line="41" Column="3" />
+      <File FileName="Sample/Sample.iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="Xamarians.GoogleLogin.iOS/DS/GoogleLogin.cs" Line="47" Column="1" />
+      <File FileName="Sample/Sample/MainPage.xaml.cs" Line="24" Column="1" />
+      <File FileName="Sample/Sample/MainPage.xaml" Line="1" Column="1" />
+      <File FileName="Xamarians.GoogleLogin.Droid/DS/GoogleLogin.cs" Line="1" Column="1" />
+      <File FileName="Xamarians.GoogleLogin.Droid/Platforms/GoogleLoginActivity.cs" Line="83" Column="51" />
+      <File FileName="Xamarians.GoogleLogin/Platforms/GoogleLoginResult.cs" Line="14" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
