@@ -28,14 +28,13 @@ iOS - in AppDelegate file write below code -
  Xamarians.GoogleLogin.iOS.DS.GoogleLogin.Init();
 ```
 Note
-```
+
 Make sure your android package name has access to google api's.
-follow this link for Android https://console.developers.google.com
+[follow this link](https://console.developers.google.com)
 
 For iOS configuration please follow steps given in the below link.
-https://components.xamarin.com/gettingstarted/googleiossignin
+[Follow this link](https://components.xamarin.com/gettingstarted/googleiossignin)
 
-```
 Add the following permissions in Android Manifest file
 ```
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
