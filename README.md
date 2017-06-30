@@ -30,7 +30,7 @@ iOS - in AppDelegate file write below code -
 Note
 
 Make sure your android package name has access to google api's.
-[follow this link](https://console.developers.google.com)
+[Follow this link](https://console.developers.google.com)
 
 For iOS configuration please follow steps given in the below link.
 [Follow this link](https://components.xamarin.com/gettingstarted/googleiossignin)
