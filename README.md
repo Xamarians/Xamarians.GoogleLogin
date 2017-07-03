@@ -42,13 +42,4 @@ Add the following permissions in Android Manifest file
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
 ```
-Add the following packages in Android from nuget-
-```
-  Xamarin.GooglePlayServices.Plus
-  Xamarin.GooglePlayServices.Base
-```  
-Add the following package in iOS from nuget-
-```
-Xamarin.Google.iOS.SignIn
-```
 For any issues log [here](https://github.com/Xamarians/Xamarians.GoogleLogin/issues)
