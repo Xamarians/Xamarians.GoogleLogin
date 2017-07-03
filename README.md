@@ -51,4 +51,4 @@ Add the following package in iOS from nuget-
 ```
 Xamarin.Google.iOS.SignIn
 ```
-
+For any issues log [here](https://github.com/Xamarians/Xamarians.Maps/issues)
