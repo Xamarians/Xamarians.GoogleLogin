@@ -9,6 +9,7 @@ namespace Xamarians.GoogleLogin.Interface
 {
     public interface IGoogleLogin
     {
-        System.Threading.Tasks.Task<GoogleLoginResult> SignIn();
+        Task<GoogleLoginResult> SignIn();
+        Task<GoogleLoginResult> SignOut();
     }
 }

@@ -22,13 +22,15 @@ namespace Xamarians.GoogleLogin.Droid.Platforms
         const string KEY_SHOULD_RESOLVE = "should_resolve";
 
 
-        GoogleApiClient mGoogleApiClient;
+        static GoogleApiClient mGoogleApiClient;
 
         bool mIsResolving = false;
 
         bool mShouldResolve = false;
 
         static TaskCompletionSource<GoogleLoginResult> _tcs;
+
+        static TaskCompletionSource<GoogleLoginResult> _logOut;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -99,7 +101,7 @@ namespace Xamarians.GoogleLogin.Droid.Platforms
         protected override void OnStop()
         {
             base.OnStop();
-            mGoogleApiClient.Disconnect();
+            //mGoogleApiClient.Disconnect();
         }
 
         protected override void OnSaveInstanceState(Bundle outState)
@@ -117,6 +119,7 @@ namespace Xamarians.GoogleLogin.Droid.Platforms
                 if (resultCode != Result.Ok)
                 {
                     mShouldResolve = false;
+                    return;
                 }
                 mIsResolving = false;
                 mGoogleApiClient.Connect();
@@ -175,14 +178,16 @@ namespace Xamarians.GoogleLogin.Droid.Platforms
         {
             int errorCode = connectionResult.ErrorCode;
 
-            if (GooglePlayServicesUtil.IsUserRecoverableError(errorCode))
+            if (GoogleApiAvailability.Instance.IsUserResolvableError(errorCode))
             {
+                
                 var listener = new DialogInterfaceOnCancelListener();
                 listener.OnCancelImpl = (dialog) =>
                 {
+
                     mShouldResolve = false;
                 };
-                GooglePlayServicesUtil.GetErrorDialog(errorCode, this, RC_SIGN_IN, listener).Show();
+                GoogleApiAvailability.Instance.GetErrorDialog(this, errorCode, RC_SIGN_IN, listener).Show();
             }
             else
             {
@@ -192,18 +197,26 @@ namespace Xamarians.GoogleLogin.Droid.Platforms
         }
 
 
-        public void SignOut()
+        public static void SignOut()
         {
             if (mGoogleApiClient.IsConnected)
             {
                 PlusClass.AccountApi.ClearDefaultAccount(mGoogleApiClient);
                 mGoogleApiClient.Disconnect();
+                var result = new GoogleLoginResult() { IsSuccess = true};
+                if (_logOut != null)
+                    _logOut.SetResult(result);
             }
         }
 
         public static void OnLoginCompleted(TaskCompletionSource<GoogleLoginResult> tcs)
         {
             _tcs = tcs;
+        }
+
+        public static void OnLogOutClicked(TaskCompletionSource<GoogleLoginResult> tcs)
+        {
+            _logOut = tcs;
         }
 
     }

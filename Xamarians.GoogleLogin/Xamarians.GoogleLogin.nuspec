@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Xamarians.GoogleLogin</id>
+    <version>1.0.2</version>
+    <authors>Xamarians</authors>
+    <owners>Xamarians</owners>
+    <licenseUrl>https://github.com/Xamarians/Xamarians.GoogleLogin/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Xamarians/Xamarians.GoogleLogin</projectUrl>
+    
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Google Sign-In is a secure authentication system that reduces the burden of login for your users, by enabling them to sign in with their Google account, the same account they already use with Gmail, Play, Google+, and other Google services.</description>
+    <releaseNotes>1:Remove loop from login if APi key is not correct. 2: Add SignOut feature</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>Google Login SignIn Auth authentication</tags>
+   <dependencies>
+    <group targetFramework="MonoAndroid">
+         <dependency id="Xamarin.GooglePlayServices.Base" version="42.1021.1" />
+         <dependency id="Xamarin.GooglePlayServices.Plus" version="42.1021.1" />
+    </group>
+    <group targetFramework="Xamarin.iOS10">
+        <!--Xamarin.iOS10 dependencies go here-->
+		<dependency id="Xamarin.Google.iOS.SignIn" version="4.0.1.2" />
+    </group>
+   
+    </dependencies>
+  </metadata>
+  <files>
+    <!--Core-->
+    <file src="..\Xamarians.GoogleLogin\Xamarians.GoogleLogin\bin\Debug\Xamarians.GoogleLogin.dll" target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Xamarians.GoogleLogin.dll" />
+    <file src="..\Xamarians.GoogleLogin\Xamarians.GoogleLogin\bin\Debug\Xamarians.GoogleLogin.pdb" target="lib\portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Xamarians.GoogleLogin.pdb" />
+
+    <!--Xamarin.Android-->
+    <file src="..\Xamarians.GoogleLogin\Xamarians.GoogleLogin.Droid\bin\Debug\Xamarians.GoogleLogin.dll" target="lib\MonoAndroid10\Xamarians.GoogleLogin.dll" />
+    <file src="..\Xamarians.GoogleLogin\Xamarians.GoogleLogin.Droid\bin\Debug\Xamarians.GoogleLogin.pdb" target="lib\MonoAndroid10\Xamarians.GoogleLogin.xml" />
+    <file src="..\Xamarians.GoogleLogin\Xamarians.GoogleLogin.Droid\bin\Debug\Xamarians.GoogleLogin.Droid.dll" target="lib\MonoAndroid10\Xamarians.GoogleLogin.Droid.dll" />
+    <file src="..\Xamarians.GoogleLogin\Xamarians.GoogleLogin.Droid\bin\Debug\Xamarians.GoogleLogin.Droid.pdb" target="lib\MonoAndroid10\Xamarians.GoogleLogin.Droid.pdb" />
+   
+    <!--Xamarin.iOS-->
+    <file src="..\Xamarians.GoogleLogin\Xamarians.GoogleLogin.iOS\bin\Debug\Xamarians.GoogleLogin.dll" target="lib\MonoTouch10\Xamarians.GoogleLogin.dll" />
+    <file src="..\Xamarians.GoogleLogin\Xamarians.GoogleLogin.iOS\bin\Debug\Xamarians.GoogleLogin.pdb" target="lib\MonoTouch10\Xamarians.GoogleLogin.xml" />
+    <file src="..\Xamarians.GoogleLogin\Xamarians.GoogleLogin.iOS\bin\Debug\Xamarians.GoogleLogin.iOS.dll" target="lib\MonoTouch10\Xamarians.GoogleLogin.iOS.dll" />
+    <file src="..\Xamarians.GoogleLogin\Xamarians.GoogleLogin.iOS\bin\Debug\Xamarians.GoogleLogin.iOS.pdb" target="lib\MonoTouch10\Xamarians.GoogleLogin.iOS.pdb" />
+  
+
+    <!--Xamarin.iOS Unified-->
+    <file src="..\Xamarians.GoogleLogin\Xamarians.GoogleLogin.iOS\bin\Debug\Xamarians.GoogleLogin.dll" target="lib\Xamarin.iOS10\Xamarians.GoogleLogin.dll" />
+    <file src="..\Xamarians.GoogleLogin\Xamarians.GoogleLogin.iOS\bin\Debug\Xamarians.GoogleLogin.pdb" target="lib\Xamarin.iOS10\Xamarians.GoogleLogin.xml" />
+    <file src="..\Xamarians.GoogleLogin\Xamarians.GoogleLogin.iOS\bin\Debug\Xamarians.GoogleLogin.iOS.dll" target="lib\Xamarin.iOS10\Xamarians.GoogleLogin.iOS.dll" />
+</files>
+</package>

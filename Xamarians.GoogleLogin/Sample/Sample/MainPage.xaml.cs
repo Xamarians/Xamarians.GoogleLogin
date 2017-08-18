@@ -26,5 +26,15 @@ namespace Sample
             }
         }
 
+        private async void OnLogoutClicked(object sender, EventArgs e)
+        {
+            var result = await DependencyService.Get<IGoogleLogin>().SignOut();
+            if(result.IsSuccess)
+            {
+                imgProfile.Source = "";
+                await DisplayAlert("Success", "Successfully Logout", "Ok");
+            }
+        }
+
     }
 }
